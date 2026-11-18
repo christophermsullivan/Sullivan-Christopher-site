@@ -87,14 +87,14 @@ a.chip:hover{text-decoration:none; filter:brightness(.92)}
 .hero{background:linear-gradient(135deg,var(--hero-a),var(--hero-b) 55%,var(--hero-c)); color:var(--hero-fg); position:relative; overflow:hidden}
 .hero::before{content:""; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(255,255,255,.16) 1px,transparent 1.4px); background-size:22px 22px; pointer-events:none}
 .hero::after{content:""; position:absolute; right:-10%; top:-40%; width:55%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle,rgba(255,255,255,.10),transparent 65%); pointer-events:none}
-.hero .wrap{position:relative; display:grid; grid-template-columns:auto minmax(0,1fr); gap:1.5rem 3rem; align-items:center; padding-block:3.2rem}
-.avatar{width:200px; height:200px; max-width:100%; border-radius:50%; background:rgba(255,255,255,.12); border:4px solid rgba(255,255,255,.55); color:#fff; display:grid; place-items:center; font-family:var(--head); font-weight:700; font-size:3.4rem; letter-spacing:.02em; box-shadow:var(--shadow-lg); overflow:hidden}
-.avatar img{width:100%; height:100%; object-fit:cover; border-radius:50%}
+.hero .wrap{position:relative; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:1.5rem 4rem; align-items:center; padding-block:3.6rem}
+.avatar{order:2; width:240px; aspect-ratio:4/5; max-width:100%; border-radius:.75rem; background:rgba(255,255,255,.12); border:3px solid rgba(255,255,255,.35); box-shadow:0 1rem 2.4rem rgba(0,0,0,.35); overflow:hidden}
+.avatar img{display:block; width:100%; height:100%; object-fit:cover; object-position:50% 25%}
 .hero h1{color:#fff; font-size:clamp(1.9rem,3.6vw,2.6rem); font-weight:700; letter-spacing:-.01em}
 .hero .role{font-size:1.15rem; color:var(--hero-muted); margin-top:.3rem}
 .hero .role a{color:#fff; font-weight:600}
-.hero .tag{font-size:1.25rem; font-weight:600; margin-top:1.1rem; max-width:40ch; line-height:1.4}
-.hero .tag.why{font-size:1.05rem; font-weight:400; color:var(--hero-muted); margin-top:.7rem; max-width:52ch}
+.hero .tag{font-size:1.25rem; font-weight:600; margin-top:1.3rem; max-width:46ch; line-height:1.45; padding-left:1rem; border-left:3px solid rgba(255,255,255,.45)}
+.hero .tag.why{font-size:1.05rem; font-weight:400; color:var(--hero-muted); margin-top:.8rem; max-width:56ch; padding-left:0; border-left:0}
 .social{display:flex; flex-wrap:wrap; gap:.5rem .6rem; margin-top:1.2rem}
 .social a{display:inline-flex; align-items:center; gap:.45rem; color:#fff; font-size:.9rem; font-weight:600; border:1px solid rgba(255,255,255,.45); padding:.35rem .75rem; border-radius:2rem}
 .social a:hover{background:rgba(255,255,255,.14); text-decoration:none}
@@ -294,9 +294,8 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
   .section{padding-block:3.2rem}
   .section-title p{max-width:none}
   .cards,.cols,.ndgrid,.public{grid-template-columns:minmax(0,1fr)}
-  .hero .wrap{grid-template-columns:minmax(0,1fr); justify-items:center; text-align:center}
-  .social{justify-content:center}
-  .hero .tag{margin-inline:auto}
+  .hero .wrap{grid-template-columns:minmax(0,1fr); justify-items:start}
+  .avatar{order:-1; width:170px}
   .framework{grid-template-columns:minmax(0,1fr); grid-template-areas:"c1" "conn" "c2" "down" "c3" "found"}
   .conn svg{transform:rotate(90deg); height:56px; width:28px}
   .found{grid-template-columns:auto minmax(0,1fr)}
@@ -306,7 +305,7 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
 }
 @media (max-width:560px){
   body{font-size:16px}
-  .avatar{width:150px; height:150px; font-size:2.6rem}
+  .avatar{width:140px}
   .card dl{grid-template-columns:minmax(0,1fr); row-gap:.1rem}
   .card dd{margin-bottom:.4rem}
   .pub{grid-template-columns:minmax(0,1fr)}
@@ -389,8 +388,8 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
     <div class="content">
       <ul class="feed" id="feed">
         <li><span class="date">Nov 2026</span><p>Louisiana State University selected me as its nominee to the 2027 Andrew Carnegie Fellows Program for <em>The Even Hand</em>, a project on how divided places lose and regain trust in the state. It pairs new street-level police and army records from Northern Ireland with a test in U.S. counties, and turns the findings into practices for police chiefs, mayors and governors, and mediators. <a class="more" href="#project-ni">Read more</a></p></li>
-        <li><span class="date">Oct 2026</span><p>The manuscript of my book, <em>Why Not Rebel? The Micro-Foundations of Political Order</em>, is complete. All seven chapters are drafted, and I will submit it to the Cambridge Studies in Comparative Politics series in January 2027. <a class="more" href="#project-book">Read more</a></p></li>
-        <li><span class="date">Oct 2026</span><p>A new article on human rights advocacy and repression in Guatemala is under review. With Emily Hencken Ritter, I am writing "Backlash," an invited review article for the <em>Annual Review of Political Science</em>. <a class="more" href="#pub-working">Read more</a></p></li>
+        <li><span class="date">Oct 2026</span><p>The manuscript of my book, <em>Why Not Rebel? The Micro-Foundations of Political Order</em>, is complete, with all seven chapters drafted. <a class="more" href="#project-book">Read more</a></p></li>
+        <li><span class="date">Oct 2026</span><p>A new article on human rights advocacy and repression in Guatemala is under review. With Emily Hencken Ritter, I have begun a new project on backlash. <a class="more" href="#pub-working">Read more</a></p></li>
         <li><span class="date">Jun 2026</span><p>Data collection for <em>Bureaucracy and Brutality: Intelligence and State-Sponsored Massacres in Iraq, 1987–1989</em> is complete. Working from the Ba'ath Party records in the Hoover Institution's Northern Iraq Database, the project builds two linked datasets, on where and when massacres took place and on the transfer of intelligence about potential threats. Coding and analysis are under way.</p></li>
         <li><span class="date">Apr 2025</span><p>I have been awarded a Silas Palmer Fellowship by the Hoover Institution Library &amp; Archives for 2025–2026, supporting new research on intelligence and mass violence in Ba'athist Iraq from the regime's own records.</p></li>
         <li><span class="date">Nov 13, 2023</span><p>Version 2 of the Association for Legal Justice human rights testimony collection, part of the Northern Ireland Research Initiative, is available at the Qualitative Data Repository. <a class="more" href="https://data.qdr.syr.edu/dataverse/NIRI">Read more</a></p></li>
@@ -416,7 +415,7 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
         <span class="kicker">Research</span>
         <h2>One question, three themes</h2>
       </div>
-      <p>A single question runs through my research: how is political order produced, contested, and enforced? I pursue it through three connected themes. The first looks at the state and how repression works; the second at challengers and how they adapt; the third at outcomes and whether coercion delivers what it promises. All three rest on the same foundation: the records that coercive institutions keep about themselves, turned into event data and analyzed with designs that can tell cause from coincidence. Three new directions now grow out of them: a study of intelligence and massacres in Ba'athist Iraq, a review of two decades of research on backlash, and an approach to public opinion that treats the ideals people hold as products of contentious politics.</p>
+      <p>A single question runs through my research: how is political order produced, contested, and enforced? I pursue it through three connected themes. The first looks at the state and how repression works; the second at challengers and how they adapt; the third at outcomes and whether coercion delivers what it promises. All three rest on the same foundation: the records that coercive institutions keep about themselves, turned into event data and analyzed with designs that can tell cause from coincidence. Three new directions now grow out of them: a study of intelligence and massacres in Ba'athist Iraq, a new project on backlash with Emily Hencken Ritter, and an approach to public opinion that treats the ideals people hold as products of contentious politics.</p>
     </div>
 
     <div class="framework" aria-label="Research framework">
@@ -604,8 +603,8 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
         </article>
         <article class="nd t2">
           <h4>Backlash</h4>
-          <p>With Emily Hencken Ritter, an invited review for the <em>Annual Review of Political Science</em> that takes stock of two decades of research on when coercion provokes resistance rather than deterring it, and sets out the questions the next decade should answer.</p>
-          <a class="st" href="#pub-working">Invited · submission July 2027 →</a>
+          <p>A new project with Emily Hencken Ritter on backlash: when coercion provokes resistance rather than deterring it, and who carries that resistance.</p>
+          <a class="st" href="#pub-working">New project · with Emily Hencken Ritter →</a>
         </article>
         <article class="nd t3">
           <h4>Public opinion and contentious politics</h4>
@@ -663,13 +662,13 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
           <figcaption>Diego Rivera, <em>Gloriosa Victoria</em> (1954), on the coup that ended Guatemala's democratic decade and set the country on the path to civil war.</figcaption>
         </figure>
         <div>
-          <span class="status">Book manuscript · complete · to Cambridge University Press, January 2027</span>
+          <span class="status">Book manuscript · complete</span>
           <h3>Why Not Rebel?</h3>
           <p class="sub">The Micro-Foundations of Political Order</p>
           <p>Guatemala's civil war produced one of the most extreme campaigns of state violence in the Western Hemisphere. Then the mass killing ended, years before the war formally did, and a political order took hold that most Guatemalans had not chosen and few openly resisted. <em>Why Not Rebel?</em> asks how.</p>
           <p>Drawing on more than 100,000 records of the National Police that I hand-coded over two years in an archive of eighty million pages, and using the 1976 earthquake as a shock to the state's capacity to watch, the book shows that repression produces order not by containing violence but by dismantling the clandestine organizational work on which open challenge depends, and by reshaping the ideological composition of local civil society. Its later chapters follow the legacies of that repression into municipal and national elections since 1996 and into the demands of protests decades later, measured against the demands for redistribution communities made before the conflict. Rather than asking why people rebel, it asks why, so often, they do not, and finds the answer in the organizational life that repression targets rather than in the attitudes of individuals or the strength of the state alone. What we call peace, it argues, can be the successful narrowing of what communities are able to demand.</p>
           <ul class="facts">
-            <li><strong>Status</strong>All seven chapters drafted; submission to the Cambridge Studies in Comparative Politics series in January 2027</li>
+            <li><strong>Status</strong>Complete manuscript, seven chapters</li>
             <li><strong>Evidence</strong>Guatemalan National Police Historical Archive, fieldwork 2009–2011 and 2023; municipal election and protest data, 1996–present</li>
             <li><strong>Support</strong>SSRC, National Science Foundation, Smith Richardson Foundation Strategy and Policy Fellowship</li>
             <li><strong>Presented</strong>Vanderbilt, Michigan, Stanford; Georgetown, spring 2027</li>
@@ -1205,7 +1204,7 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
           <div>
             <p class="t">Backlash</p>
             <p class="authors">Christopher M. Sullivan and Emily Hencken Ritter</p>
-            <p class="venue">Invited review article, Annual Review of Political Science; submission July 2027 for the 2028 volume</p>
+            <p class="venue">New project on when coercion provokes resistance rather than deterring it</p>
             <div class="meta"><span class="chip t2">Resisting order</span></div>
           </div>
         </article>
