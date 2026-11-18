@@ -112,7 +112,7 @@ a.chip:hover{text-decoration:none; filter:brightness(.92)}
 .bio .side > * + *{margin-top:1.4rem}
 .interests{display:flex; flex-wrap:wrap; gap:.4rem}
 .interests li{font-size:.9rem; font-weight:600; color:var(--accent); background:var(--accent-soft); padding:.25rem .65rem; border-radius:.3rem}
-.edu li{display:grid; grid-template-columns:1.5rem minmax(0,1fr); gap:.3rem; margin-bottom:.55rem; align-items:start; font-size:.97rem}
+.edu li{display:block; gap:.3rem; margin-bottom:.55rem; align-items:start; font-size:.97rem}
 .edu li svg.i{font-size:1.15rem; color:var(--accent); margin-top:.25rem}
 .edu li span{display:block; color:var(--muted); font-size:.9rem}
 
@@ -164,7 +164,7 @@ h3.sub{font-size:1.2rem; margin-bottom:.6rem}
 .conn svg{width:56px; height:28px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
 .down{grid-area:down; display:grid; place-items:center; gap:.2rem; color:var(--muted); font-size:.75rem; font-weight:600}
 .down svg{width:28px; height:30px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
-.found{display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:1rem 1.25rem; align-items:center; background:var(--ts); border:1px solid color-mix(in srgb,var(--tc) 25%,var(--line)); border-radius:.5rem; padding:1rem 1.35rem; color:var(--fg)}
+.found{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:1rem 1.25rem; align-items:center; background:var(--ts); border:1px solid color-mix(in srgb,var(--tc) 25%,var(--line)); border-radius:.5rem; padding:1rem 1.35rem; color:var(--fg)}
 .found .icon{width:2.4rem; height:2.4rem; border-radius:.6rem; background:var(--surface); color:var(--tc); display:grid; place-items:center; font-size:1.25rem}
 .found h3{font-size:1rem}
 .found p{font-size:.93rem; color:var(--muted)}
@@ -174,6 +174,7 @@ h3.sub{font-size:1.2rem; margin-bottom:.6rem}
 /* Theme blocks */
 .themes{display:grid; gap:2rem; margin-top:3rem}
 .theme{background:var(--surface); border:1px solid var(--line); border-radius:.6rem; box-shadow:var(--shadow); overflow:hidden; scroll-margin-top:80px}
+.theme-head:has(> div:only-child){grid-template-columns:minmax(0,1fr)}
 .theme-head{display:grid; grid-template-columns:auto minmax(0,1fr); gap:1.2rem; align-items:center; padding:1.5rem 1.8rem; background:var(--ts); border-bottom:1px solid var(--line)}
 .theme-head .num{font-family:var(--head); font-weight:800; font-size:3.2rem; line-height:1; color:var(--tc); opacity:.9; display:grid; place-items:center; min-width:3rem}
 .theme-head .kicker{color:var(--tc)}
@@ -347,8 +348,8 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
 /* Mechanism diagram */
 .mech{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; margin:0 0 1.3rem; background:var(--ts); border:1px solid color-mix(in srgb,var(--tc) 25%,var(--line)); border-radius:.5rem; padding:1.1rem .6rem; position:relative}
 .mech .step{position:relative; text-align:center; padding:0 .8rem; min-width:0}
-.mech .step + .step::before{content:""; position:absolute; left:-.45rem; top:1.15rem; width:.9rem; height:.9rem; border-top:2px solid var(--tc); border-right:2px solid var(--tc); transform:rotate(45deg); opacity:.7}
-.mech .ic{width:2.6rem; height:2.6rem; margin:0 auto .5rem; border-radius:50%; background:var(--surface); color:var(--tc); display:grid; place-items:center; font-size:1.3rem; box-shadow:var(--shadow)}
+.mech .step + .step::before{content:""; position:absolute; left:-.45rem; top:.6rem; width:.9rem; height:.9rem; border-top:2px solid var(--tc); border-right:2px solid var(--tc); transform:rotate(45deg); opacity:.7}
+.mech .ic{width:2rem; height:2rem; margin:0 auto .5rem; border-radius:50%; background:var(--tc); color:var(--surface); display:grid; place-items:center; font-family:var(--head); font-weight:700; font-size:.9rem}
 .mech b{display:block; font-family:var(--head); font-size:.82rem; line-height:1.3; color:var(--fg)}
 .mech span{display:block; font-size:.78rem; color:var(--muted); line-height:1.35; margin-top:.2rem}
 .mech-cap{grid-column:1/-1; font-size:.78rem; color:var(--muted); text-align:center; margin-top:.8rem}
@@ -381,8 +382,8 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
   .avatar{order:-1; width:170px}
   .framework{grid-template-columns:minmax(0,1fr); grid-template-areas:"c1" "conn" "c2" "down" "c3" "found"}
   .conn svg{transform:rotate(90deg); height:56px; width:28px}
-  .found{grid-template-columns:auto minmax(0,1fr)}
-  .found .btn{grid-column:2}
+  .found{grid-template-columns:minmax(0,1fr)}
+  .found .btn{justify-self:start}
   .project{grid-template-columns:minmax(0,1fr)}
   .stats{grid-template-columns:minmax(0,1fr)}
 }
@@ -428,11 +429,11 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
       <p class="tag">Why do people obey governments they never chose, and what makes them stop?</p>
       <p class="tag why">The answer lies in how states build order through coercion, and in what happens when that order fails. I study both from the inside, turning the files that police, armies, ruling parties, and intelligence services keep on the people they watch into data. Those records speak to questions every society faces: how repression silences demands, when divided societies tip into violence, and how they find their way back.</p>
       <div class="social">
-        <a href="#contact"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
-        <a href="Sullivan_CV.pdf"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>CV</a>
-        <a href="https://scholar.google.com/citations?user=SfNmaQgAAAAJ"><svg class="i" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>Google Scholar</a>
-        <a href="https://data.qdr.syr.edu/dataverse/NIRI"><svg class="i" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Data</a>
-        <a href="https://lsu.edu/hss/polisci/faculty_and_staff/sullivan-c.php"><svg class="i" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>LSU</a>
+        <a href="#contact">Email</a>
+        <a href="Sullivan_CV.pdf">CV</a>
+        <a href="https://scholar.google.com/citations?user=SfNmaQgAAAAJ">Google Scholar</a>
+        <a href="https://data.qdr.syr.edu/dataverse/NIRI">Data</a>
+        <a href="https://lsu.edu/hss/polisci/faculty_and_staff/sullivan-c.php">LSU</a>
       </div>
     </div>
   </div>
@@ -463,11 +464,11 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
       <div>
         <h3>Education</h3>
         <ul class="edu">
-          <li><svg class="i" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg><div>Ph.D. in Political Science, with distinction, 2014<span>University of Michigan</span></div></li>
-          <li><svg class="i" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg><div>M.A. in Political Science, 2010<span>University of Notre Dame</span></div></li>
-          <li><svg class="i" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg><div>M.A. in Government and Politics, 2008<span>University of Maryland</span></div></li>
-          <li><svg class="i" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg><div>M.S. in Comparative Politics, 2006<span>Vrije Universiteit Amsterdam</span></div></li>
-          <li><svg class="i" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg><div>B.A., 2005<span>Binghamton University</span></div></li>
+          <li><div>Ph.D. in Political Science, with distinction, 2014<span>University of Michigan</span></div></li>
+          <li><div>M.A. in Political Science, 2010<span>University of Notre Dame</span></div></li>
+          <li><div>M.A. in Government and Politics, 2008<span>University of Maryland</span></div></li>
+          <li><div>M.S. in Comparative Politics, 2006<span>Vrije Universiteit Amsterdam</span></div></li>
+          <li><div>B.A., 2005<span>Binghamton University</span></div></li>
         </ul>
       </div>
     </div>
@@ -482,21 +483,21 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
     </div>
     <div class="content">
       <ul class="feed" id="feed">
-        <li><div class="hl-top"><span class="date">Nov 2026</span><span class="hltype t3"><svg class="i" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>Award</span></div><p>Louisiana State University selected me as its nominee to the 2027 Andrew Carnegie Fellows Program for <em>The Even Hand</em>, a project on how divided places lose and regain trust in the state. It pairs new street-level police and army records from Northern Ireland with a test in U.S. counties, and turns the findings into practices for police chiefs, mayors and governors, and mediators. <a class="more" href="#project-ni">Read more</a></p></li>
-        <li><div class="hl-top"><span class="date">Oct 2026</span><span class="hltype t1"><svg class="i" viewBox="0 0 24 24"><path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z"/></svg>Book</span></div><p>The manuscript of my book, <em>Why Not Rebel? The Micro-Foundations of Political Order</em>, is complete, with all seven chapters drafted. <a class="more" href="#project-book">Read more</a></p></li>
-        <li><div class="hl-top"><span class="date">Oct 2026</span><span class="hltype t1"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>Research</span></div><p>A new article on human rights advocacy and repression in Guatemala is under review. With Emily Hencken Ritter, I have begun a new project on backlash. <a class="more" href="#pub-working">Read more</a></p></li>
-        <li><div class="hl-top"><span class="date">Jun 2026</span><span class="hltype t2"><svg class="i" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Data</span></div><p>Data collection for <em>Bureaucracy and Brutality: Intelligence and State-Sponsored Massacres in Iraq, 1987–1989</em> is complete. Working from the Ba'ath Party records in the Hoover Institution's Northern Iraq Database, the project builds two linked datasets, on where and when massacres took place and on the transfer of intelligence about potential threats. Coding and analysis are under way.</p></li>
-        <li><div class="hl-top"><span class="date">Apr 2025</span><span class="hltype t3"><svg class="i" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>Fellowship</span></div><p>I have been awarded a Silas Palmer Fellowship by the Hoover Institution Library &amp; Archives for 2025–2026, supporting new research on intelligence and mass violence in Ba'athist Iraq from the regime's own records.</p></li>
-        <li><div class="hl-top"><span class="date">Nov 13, 2023</span><span class="hltype t2"><svg class="i" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Data</span></div><p>Version 2 of the Association for Legal Justice human rights testimony collection, part of the Northern Ireland Research Initiative, is available at the Qualitative Data Repository. <a class="more" href="https://data.qdr.syr.edu/dataverse/NIRI">Read more</a></p></li>
-        <li class="earlier" hidden><div class="hl-top"><span class="date">Dec 9, 2021</span><span class="hltype t0"><svg class="i" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8"/></svg>Talk</span></div><p>I presented "Why Not Rebel? Discovering the Origins of Political Order in the Guatemalan Police Archives" at the Conflict Records Unit, King's College London. <a class="more" href="https://www.kcl.ac.uk/events/why-not-rebel-discovering-the-origins-of-political-order-in-the-guatemalan-police-archives">Read more</a></p></li>
-        <li class="earlier" hidden><div class="hl-top"><span class="date">Nov 2021</span><span class="hltype t1"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>Article</span></div><p>"And the Heat Goes On: Police Repression and the Modalities of Power," with Howard Liu, is out in the <em>Journal of Conflict Resolution</em>. <a class="more" href="https://doi.org/10.1177/00220027211013099">Read more</a></p></li>
-        <li class="earlier" hidden><div class="hl-top"><span class="date">2021</span><span class="hltype t0"><svg class="i" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>Promotion</span></div><p>I have been promoted to Associate Professor with tenure in the Department of Political Science at Louisiana State University.</p></li>
-        <li class="earlier" hidden><div class="hl-top"><span class="date">2019</span><span class="hltype t3"><svg class="i" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>Fellowship</span></div><p>I have been named a Strategy and Policy Fellow of the Smith Richardson Foundation (2019–2023).</p></li>
-        <li class="earlier" hidden><div class="hl-top"><span class="date">Dec 20, 2018</span><span class="hltype t0"><svg class="i" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>Essay</span></div><p>Laia Balcells and I wrote about how new data from conflict archives are transforming conflict studies for <em>Political Violence at a Glance</em>. <a class="more" href="https://politicalviolenceataglance.org/2018/12/20/seeing-like-combatants-how-new-data-from-conflict-archives-are-transforming-conflict-studies/">Read more</a></p></li>
-        <li class="earlier" hidden><div class="hl-top"><span class="date">Mar 2018</span><span class="hltype t1"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>Article</span></div><p>The <em>Journal of Peace Research</em> special issue on new findings from conflict archives, which I co-edited with Laia Balcells, is out, with our introduction and my article with Christian Davenport on repression, adaptation, and surveillance. <a class="more" href="https://journals.sagepub.com/toc/jpra/55/2">Read more</a></p></li>
-        <li class="earlier" hidden><div class="hl-top"><span class="date">Oct 2017</span><span class="hltype t1"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>Article</span></div><p>"Evidence that Curtailing Proactive Policing Can Reduce Major Crime," with Zachary O'Keeffe, appears in <em>Nature Human Behaviour</em>, with coverage from the <em>Los Angeles Times</em> to <em>Ars Technica</em>. <a class="more" href="https://doi.org/10.1038/s41562-017-0211-5">Read more</a></p></li>
-        <li class="earlier" hidden><div class="hl-top"><span class="date">Sep 1, 2015</span><span class="hltype t3"><svg class="i" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Grant</span></div><p>The National Science Foundation has funded our collaborative project, "An Organizational Approach to State Repression: The Northern Ireland Research Initiative and the Troubles, 1968–1998," with Christian Davenport and Cyanne Loyle. <a class="more" href="https://cps.isr.umich.edu/projects/collaborative-research-an-organizational-approach-to-state-repression-the-northern-ireland-research-initiative-and-the-troubles-1968-1998/">Read more</a></p></li>
-        <li class="earlier" hidden><div class="hl-top"><span class="date">2015</span><span class="hltype t3"><svg class="i" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>Award</span></div><p>"The (In)effectiveness of Torture for Combating Insurgency" was named runner-up for the <em>Journal of Peace Research</em> Article of the Year Award for 2014. <a class="more" href="https://prio.org/journals/jpr/articlesoftheyear/2014">Read more</a></p></li>
+        <li><div class="hl-top"><span class="date">Nov 2026</span><span class="hltype t3">Award</span></div><p>Louisiana State University selected me as its nominee to the 2027 Andrew Carnegie Fellows Program for <em>The Even Hand</em>, a project on how divided places lose and regain trust in the state. It pairs new street-level police and army records from Northern Ireland with a test in U.S. counties, and turns the findings into practices for police chiefs, mayors and governors, and mediators. <a class="more" href="#project-ni">Read more</a></p></li>
+        <li><div class="hl-top"><span class="date">Oct 2026</span><span class="hltype t1">Book</span></div><p>The manuscript of my book, <em>Why Not Rebel? The Micro-Foundations of Political Order</em>, is complete, with all seven chapters drafted. <a class="more" href="#project-book">Read more</a></p></li>
+        <li><div class="hl-top"><span class="date">Oct 2026</span><span class="hltype t1">Research</span></div><p>A new article on human rights advocacy and repression in Guatemala is under review. With Emily Hencken Ritter, I have begun a new project on backlash. <a class="more" href="#pub-working">Read more</a></p></li>
+        <li><div class="hl-top"><span class="date">Jun 2026</span><span class="hltype t2">Data</span></div><p>Data collection for <em>Bureaucracy and Brutality: Intelligence and State-Sponsored Massacres in Iraq, 1987–1989</em> is complete. Working from the Ba'ath Party records in the Hoover Institution's Northern Iraq Database, the project builds two linked datasets, on where and when massacres took place and on the transfer of intelligence about potential threats. Coding and analysis are under way.</p></li>
+        <li><div class="hl-top"><span class="date">Apr 2025</span><span class="hltype t3">Fellowship</span></div><p>I have been awarded a Silas Palmer Fellowship by the Hoover Institution Library &amp; Archives for 2025–2026, supporting new research on intelligence and mass violence in Ba'athist Iraq from the regime's own records.</p></li>
+        <li><div class="hl-top"><span class="date">Nov 13, 2023</span><span class="hltype t2">Data</span></div><p>Version 2 of the Association for Legal Justice human rights testimony collection, part of the Northern Ireland Research Initiative, is available at the Qualitative Data Repository. <a class="more" href="https://data.qdr.syr.edu/dataverse/NIRI">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Dec 9, 2021</span><span class="hltype t0">Talk</span></div><p>I presented "Why Not Rebel? Discovering the Origins of Political Order in the Guatemalan Police Archives" at the Conflict Records Unit, King's College London. <a class="more" href="https://www.kcl.ac.uk/events/why-not-rebel-discovering-the-origins-of-political-order-in-the-guatemalan-police-archives">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Nov 2021</span><span class="hltype t1">Article</span></div><p>"And the Heat Goes On: Police Repression and the Modalities of Power," with Howard Liu, is out in the <em>Journal of Conflict Resolution</em>. <a class="more" href="https://doi.org/10.1177/00220027211013099">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">2021</span><span class="hltype t0">Promotion</span></div><p>I have been promoted to Associate Professor with tenure in the Department of Political Science at Louisiana State University.</p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">2019</span><span class="hltype t3">Fellowship</span></div><p>I have been named a Strategy and Policy Fellow of the Smith Richardson Foundation (2019–2023).</p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Dec 20, 2018</span><span class="hltype t0">Essay</span></div><p>Laia Balcells and I wrote about how new data from conflict archives are transforming conflict studies for <em>Political Violence at a Glance</em>. <a class="more" href="https://politicalviolenceataglance.org/2018/12/20/seeing-like-combatants-how-new-data-from-conflict-archives-are-transforming-conflict-studies/">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Mar 2018</span><span class="hltype t1">Article</span></div><p>The <em>Journal of Peace Research</em> special issue on new findings from conflict archives, which I co-edited with Laia Balcells, is out, with our introduction and my article with Christian Davenport on repression, adaptation, and surveillance. <a class="more" href="https://journals.sagepub.com/toc/jpra/55/2">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Oct 2017</span><span class="hltype t1">Article</span></div><p>"Evidence that Curtailing Proactive Policing Can Reduce Major Crime," with Zachary O'Keeffe, appears in <em>Nature Human Behaviour</em>, with coverage from the <em>Los Angeles Times</em> to <em>Ars Technica</em>. <a class="more" href="https://doi.org/10.1038/s41562-017-0211-5">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Sep 1, 2015</span><span class="hltype t3">Grant</span></div><p>The National Science Foundation has funded our collaborative project, "An Organizational Approach to State Repression: The Northern Ireland Research Initiative and the Troubles, 1968–1998," with Christian Davenport and Cyanne Loyle. <a class="more" href="https://cps.isr.umich.edu/projects/collaborative-research-an-organizational-approach-to-state-repression-the-northern-ireland-research-initiative-and-the-troubles-1968-1998/">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">2015</span><span class="hltype t3">Award</span></div><p>"The (In)effectiveness of Torture for Combating Insurgency" was named runner-up for the <em>Journal of Peace Research</em> Article of the Year Award for 2014. <a class="more" href="https://prio.org/journals/jpr/articlesoftheyear/2014">Read more</a></p></li>
       </ul>
       <div class="feed-toggle"><button class="btn ghost" type="button" id="feed-more" aria-expanded="false">Show earlier highlights</button></div>
     </div>
@@ -515,7 +516,7 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
 
     <div class="framework" aria-label="Research framework">
       <a class="fcard t1" id="fc1" href="#theme-1">
-        <div class="top"><span class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span><span class="kicker">Theme 1</span></div>
+        <div class="top"><span class="kicker">Theme 1</span></div>
         <h3>Enforcing order</h3>
         <p class="q">How does repression work, and why don't people rebel?</p>
         <span class="go">Findings, contributions, and publications</span>
@@ -525,7 +526,7 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
         <span>repression and adaptation</span>
       </div>
       <a class="fcard t2" id="fc2" href="#theme-2">
-        <div class="top"><span class="icon"><svg class="i" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M6 8.5v3a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-3M12 14.5v1"/></svg></span><span class="kicker">Theme 2</span></div>
+        <div class="top"><span class="kicker">Theme 2</span></div>
         <h3>Resisting order</h3>
         <p class="q">How do movements adapt to coercion and surveillance, and when does repression backfire?</p>
         <span class="go">Findings, contributions, and publications</span>
@@ -535,13 +536,13 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
         <span>outcomes</span>
       </div>
       <a class="fcard t3" id="fc3" href="#theme-3">
-        <div class="top"><span class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M12 3v18M4 7h16M6 7l-3 7a4 4 0 0 0 6 0zM18 7l-3 7a4 4 0 0 0 6 0zM8 21h8"/></svg></span><span class="kicker">Theme 3</span></div>
+        <div class="top"><span class="kicker">Theme 3</span></div>
         <h3>Evaluating coercion</h3>
         <p class="q">Do coercive policies deliver what they promise? Torture, proactive policing, and humanitarian aid, tested with causal designs.</p>
         <span class="go">Findings, contributions, and publications</span>
       </a>
       <div class="found t0">
-        <span class="icon"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M10 13h4"/></svg></span>
+        
         <div>
           <h3>Foundation: conflict archives as data</h3>
           <p>Police, army, party, intelligence, and movement records from Guatemala, Northern Ireland, the United States, and Iraq, coded as events and paired with research designs built for causal inference.</p>
@@ -659,7 +660,6 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
 
       <article class="theme t0" id="theme-0">
         <header class="theme-head">
-          <span class="num"><svg class="i" viewBox="0 0 24 24" style="font-size:2.6rem"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M10 13h4"/></svg></span>
           <div>
             <span class="kicker">Foundation · Method</span>
             <h3>Conflict archives as data</h3>
@@ -782,10 +782,10 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
 
       <article class="project t1 vis-top" id="project-iraq">
         <div class="mech" aria-label="The project's argument in four steps">
-          <div class="step"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><b>Surveillance reaches unevenly</b><span>Further into some regions than others</span></div>
-          <div class="step"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 18v-6M9 15l3-3 3 3"/></svg></span><b>Reports filter upward</b><span>Local information travels up the hierarchy unevenly</span></div>
-          <div class="step"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><b>Communities are labeled threats</b><span>Agencies sifting their data mark whole places</span></div>
-          <div class="step"><span class="ic"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><b>Targets are selected</b><span>Massacres follow where the labels fall</span></div>
+          <div class="step"><span class="ic">1</span><b>Surveillance reaches unevenly</b><span>Further into some regions than others</span></div>
+          <div class="step"><span class="ic">2</span><b>Reports filter upward</b><span>Local information travels up the hierarchy unevenly</span></div>
+          <div class="step"><span class="ic">3</span><b>Communities are labeled threats</b><span>Agencies sifting their data mark whole places</span></div>
+          <div class="step"><span class="ic">4</span><b>Targets are selected</b><span>Massacres follow where the labels fall</span></div>
           <p class="mech-cap">The argument: states construct threats, then respond to them. The two linked datasets, on intelligence transfers and on massacres, measure each link.</p>
         </div>
         <div>
@@ -1173,7 +1173,7 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
             <p class="t"><a href="https://doi.org/10.1177/0022343313520023">The (In)effectiveness of Torture for Combating Insurgency</a></p>
             <p class="authors">Christopher M. Sullivan</p>
             <p class="venue">Journal of Peace Research 51(3): 388–404, 2014</p>
-            <div class="meta"><span class="chip t3">Evaluating coercion</span><span class="award"><svg class="i" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>Runner-up, Journal of Peace Research Article of the Year Award, 2014</span></div>
+            <div class="meta"><span class="chip t3">Evaluating coercion</span><span class="award">Runner-up, Journal of Peace Research Article of the Year Award, 2014</span></div>
             <div class="btns"><a class="btn" href="https://doi.org/10.1177/0022343313520023">Journal</a><a class="btn" href="https://politicalviolenceataglance.org/2014/04/14/does-torture-work/">Essay</a><a class="btn" href="https://journalistsresource.org/politics-and-government/does-torture-work-research-says-no/">Coverage</a><button class="btn" type="button" data-toggle="abs-jpr2014" aria-expanded="false">Abstract</button><button class="btn" type="button" data-toggle="cite-jpr2014" aria-expanded="false">Cite</button></div>
             <div class="panel" id="abs-jpr2014" hidden><p>Monthly municipal data from Guatemala, 1977–1994, analyzed with matching and difference-in-differences, show that torture was followed by increases in counterinsurgent killing but no robust reduction in insurgent violence. Whatever torture does, it does not reliably weaken an insurgency.</p></div>
             <div class="panel" id="cite-jpr2014" hidden><pre>@article{sullivan2014ineffectiveness,
@@ -1440,9 +1440,8 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
     </div>
     <div class="content">
       <ul class="contact">
-        <li><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div class="copy"><code id="email">csullivan@lsu.edu</code><button class="btn" id="copy-email" type="button">Copy</button><span class="copied" id="email-copied" hidden>Copied</span></div></li>
-        <li><svg class="i" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.8 2.1z"/></svg><div>225-578-2141</div></li>
-        <li><svg class="i" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div>Department of Political Science, Louisiana State University<br>208-A Stubbs Hall, Baton Rouge, LA 70803</div></li>
+        <li><div class="copy"><code id="email">csullivan@lsu.edu</code><button class="btn" id="copy-email" type="button">Copy</button><span class="copied" id="email-copied" hidden>Copied</span></div></li>
+        <li><div>Department of Political Science, Louisiana State University<br>208-A Stubbs Hall, Baton Rouge, LA 70803</div></li>
       </ul>
       <div class="btns" style="margin-top:1.2rem">
         <a class="btn solid" href="Sullivan_CV.pdf">Curriculum vitae (PDF)</a>
