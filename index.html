@@ -1,4 +1,8 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Christopher M. Sullivan</title>
 <meta name="description" content="Christopher M. Sullivan, Associate Professor of Political Science at Louisiana State University. Research on state repression, polarization and political violence, political order, public opinion, and conflict archives in Guatemala, Northern Ireland, the United States, and Iraq.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -195,6 +199,14 @@ h3.sub{font-size:1.2rem; margin-bottom:.6rem}
 .project .fig{margin:0 0 .3rem}
 .project .fig img{display:block; width:100%; height:auto; border-radius:.4rem; border:1px solid var(--line); background:var(--alt)}
 .project .fig figcaption{font-size:.8rem; line-height:1.45; color:var(--muted); margin-top:.6rem}
+.project .fig .credit{display:block; font-size:.72rem; margin-top:.2rem; opacity:.85}
+.project .datafig{margin:1.3rem 0 .4rem}
+.project .datafig > a{display:block; background:#fff; border:1px solid var(--line); border-radius:.4rem; padding:.6rem; box-shadow:var(--shadow)}
+.project .datafig > a:hover{box-shadow:var(--shadow-lg)}
+.project .datafig img{display:block; width:100%; height:auto}
+.project .datafig.tall > a{max-width:640px; margin-inline:auto}
+.project .datafig figcaption{font-size:.84rem; line-height:1.5; color:var(--muted); margin-top:.6rem}
+.project .datafig figcaption b{color:var(--fg); font-family:var(--head); font-size:.8rem}
 .project .lede{font-size:1.08rem; font-weight:500; line-height:1.55}
 .project .plain-lang{margin-top:1rem; padding:.9rem 1.1rem; border-left:3px solid var(--tc); background:var(--alt); border-radius:0 .4rem .4rem 0; font-size:.97rem}
 .project .plain-lang h4{font-family:var(--head); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--tc); margin-bottom:.35rem}
@@ -243,7 +255,7 @@ h3.sub{font-size:1.2rem; margin-bottom:.6rem}
 .stats{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-bottom:1.5rem}
 .stat{background:var(--surface); border:1px solid var(--line); border-radius:.5rem; padding:.9rem 1.1rem; box-shadow:var(--shadow)}
 .stat b{display:block; font-family:var(--head); font-weight:800; font-size:1.6rem; color:var(--accent); line-height:1.1; font-variant-numeric:tabular-nums}
-.stat span{font-size:.85rem; color:var(--muted)}
+.stat span{display:block; font-size:.85rem; line-height:1.45; color:var(--muted); margin-top:.3rem}
 .cards{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem}
 .card{background:var(--surface); border:1px solid var(--line); border-radius:.5rem; box-shadow:var(--shadow); padding:1.25rem 1.3rem 1.3rem; min-width:0; display:grid; gap:.8rem; align-content:start; scroll-margin-top:80px; border-top:4px solid var(--tc,var(--line))}
 .card.dev{box-shadow:none; border-style:dashed; border-top-style:solid; background:transparent}
@@ -289,6 +301,77 @@ h3.sub{font-size:1.2rem; margin-bottom:.6rem}
 footer{background:var(--hero-a); color:var(--hero-muted)}
 footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wrap; gap:.5rem 1.5rem; justify-content:space-between}
 
+/* Credentials band */
+.creds{background:var(--surface); border-bottom:1px solid var(--line)}
+.creds .wrap{display:grid; grid-template-columns:auto minmax(0,1fr); gap:.55rem 1.4rem; padding-block:1.1rem; align-items:baseline}
+.creds .lbl{font-family:var(--head); font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); white-space:nowrap}
+.creds ul{display:flex; flex-wrap:wrap; gap:.25rem 0}
+.creds li{font-family:Georgia,"Times New Roman",serif; font-style:italic; font-size:1rem; color:var(--fg); opacity:.85}
+.creds li + li::before{content:"\00b7"; font-style:normal; margin:0 .6rem; color:var(--line); opacity:1}
+.creds li.org{font-style:normal; font-family:var(--head); font-size:.85rem; font-weight:600; letter-spacing:.01em}
+
+/* Highlight type badges */
+.feed .hl-top{display:flex; align-items:center; gap:.6rem; margin-bottom:.3rem}
+.feed .hl-top .date{margin:0}
+.hltype{display:inline-flex; align-items:center; gap:.3rem; font-family:var(--head); font-size:.62rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:.12rem .5rem; border-radius:1rem; color:var(--tc); background:var(--ts)}
+.hltype svg.i{font-size:.8rem}
+
+/* Records chart */
+.records{background:var(--surface); border:1px solid var(--line); border-radius:.6rem; box-shadow:var(--shadow); padding:1.3rem 1.4rem 1.2rem; margin-bottom:1.5rem}
+.records h3{font-size:1.15rem}
+.records .intro{font-size:.92rem; color:var(--muted); margin:.25rem 0 1rem}
+.rc{display:grid; grid-template-columns:13rem minmax(0,1fr); column-gap:1rem; row-gap:.45rem; align-items:center}
+.rc .lab{font-size:.84rem; line-height:1.25; text-align:right; color:var(--fg)}
+.rc .lab a{color:inherit}
+.rc .lab small{display:block; color:var(--muted); font-size:.74rem}
+.rc .trk{position:relative; height:1.15rem; background:repeating-linear-gradient(90deg,transparent 0 calc(12.345% - 1px),var(--line) calc(12.345% - 1px) 12.345%); border-radius:.2rem}
+.rc .bar{position:absolute; top:0; bottom:0; min-width:7px; border-radius:.2rem; background:var(--tc)}
+.rc .bar.open{background:linear-gradient(90deg,var(--tc) 70%,color-mix(in srgb,var(--tc) 25%,transparent))}
+.rc .ax{grid-column:2; position:relative; height:1.2rem; font-size:.72rem; color:var(--muted); font-variant-numeric:tabular-nums}
+.rc .ax span{position:absolute; transform:translateX(-50%)}
+.rc-key{display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.9rem}
+
+/* Publication chart */
+.pubchart{background:var(--surface); border:1px solid var(--line); border-radius:.6rem; box-shadow:var(--shadow); padding:1.2rem 1.4rem 1rem; margin-bottom:2rem}
+.pubchart h3{font-size:1.1rem}
+.pubchart .intro{font-size:.9rem; color:var(--muted); margin:.2rem 0 .9rem}
+.pc{display:grid; grid-template-columns:repeat(11,minmax(0,1fr)); align-items:end; gap:.3rem; border-bottom:2px solid var(--line); min-height:6.2rem}
+.pc .col{display:flex; flex-direction:column-reverse; align-items:center; gap:.3rem; padding-bottom:.4rem}
+.pc .col.wip{border-left:1px dashed var(--line)}
+.pc a.dot,.pc span.dot{display:block; width:1.05rem; height:1.05rem; border-radius:50%; background:var(--tc)}
+.pc span.dot{background:transparent; border:2px solid var(--tc)}
+.pc a.dot.wip{background:transparent; border:2px solid var(--tc)}
+.pc a.dot:hover{transform:scale(1.2); text-decoration:none}
+.pc-ax{display:grid; grid-template-columns:repeat(11,minmax(0,1fr)); gap:.3rem; font-size:.72rem; color:var(--muted); text-align:center; margin-top:.3rem; font-variant-numeric:tabular-nums}
+
+/* Mechanism diagram */
+.mech{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; margin:0 0 1.3rem; background:var(--ts); border:1px solid color-mix(in srgb,var(--tc) 25%,var(--line)); border-radius:.5rem; padding:1.1rem .6rem; position:relative}
+.mech .step{position:relative; text-align:center; padding:0 .8rem; min-width:0}
+.mech .step + .step::before{content:""; position:absolute; left:-.45rem; top:1.15rem; width:.9rem; height:.9rem; border-top:2px solid var(--tc); border-right:2px solid var(--tc); transform:rotate(45deg); opacity:.7}
+.mech .ic{width:2.6rem; height:2.6rem; margin:0 auto .5rem; border-radius:50%; background:var(--surface); color:var(--tc); display:grid; place-items:center; font-size:1.3rem; box-shadow:var(--shadow)}
+.mech b{display:block; font-family:var(--head); font-size:.82rem; line-height:1.3; color:var(--fg)}
+.mech span{display:block; font-size:.78rem; color:var(--muted); line-height:1.35; margin-top:.2rem}
+.mech-cap{grid-column:1/-1; font-size:.78rem; color:var(--muted); text-align:center; margin-top:.8rem}
+
+@media (max-width:900px){
+  .rc{grid-template-columns:minmax(0,1fr)}
+  .rc .lab{text-align:left; margin-top:.35rem}
+  .rc .ax{grid-column:1}
+  .mech{grid-template-columns:repeat(2,minmax(0,1fr)); row-gap:1.2rem}
+  .mech .step:nth-child(3)::before{display:none}
+}
+@media (max-width:560px){
+  .creds .wrap{grid-template-columns:minmax(0,1fr); row-gap:.35rem}
+  .creds ul{gap:.15rem .9rem; margin-bottom:.4rem}
+  .creds li + li::before{content:none}
+  .creds li{font-size:.92rem}
+  .mech{grid-template-columns:minmax(0,1fr); row-gap:2rem}
+  .mech .step + .step::before{left:50%; top:-1.45rem; transform:translateX(-50%) rotate(135deg); display:block}
+  .mech .step:nth-child(3)::before{display:block}
+  .pc a.dot,.pc span.dot{width:.8rem; height:.8rem}
+  .pc-ax{font-size:.62rem}
+}
+
 @media (max-width:900px){
   .section .inner,.bio .inner,.research-head,.theme-body,.theme-foot{grid-template-columns:minmax(0,1fr)}
   .section{padding-block:3.2rem}
@@ -318,6 +401,8 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
 }
 </style>
 
+</head>
+<body>
 <nav class="nav" aria-label="Site">
   <div class="wrap">
     <a class="brand" href="#top">Christopher M. Sullivan</a>
@@ -336,12 +421,12 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="avatar"><img src="headshot.jpg" alt="Christopher M. Sullivan" width="640" height="640"></div>
+    <div class="avatar"><img src="img/headshot.jpg" alt="Christopher M. Sullivan" width="640" height="640"></div>
     <div>
       <h1>Christopher M. Sullivan</h1>
       <p class="role">Associate Professor of Political Science · <a href="https://lsu.edu/hss/polisci/faculty_and_staff/sullivan-c.php">Louisiana State University</a></p>
-      <p class="tag">I study political order and human rights: how order is produced, contested, and enforced, and what it leaves behind.</p>
-      <p class="tag why">My evidence is the paper trail of coercion: police, army, party, and intelligence files from Guatemala, Northern Ireland, the United States, and Iraq. The aim is practical: to understand when polarized societies tip into violence and how they pull back.</p>
+      <p class="tag">Why do people obey governments they never chose, and what makes them stop?</p>
+      <p class="tag why">The answer lies in how states build order through coercion, and in what happens when that order fails. I study both from the inside, turning the files that police, armies, ruling parties, and intelligence services keep on the people they watch into data. Those records speak to questions every society faces: how repression silences demands, when divided societies tip into violence, and how they find their way back.</p>
       <div class="social">
         <a href="#contact"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
         <a href="Sullivan_CV.pdf"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>CV</a>
@@ -352,6 +437,15 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
     </div>
   </div>
 </header>
+
+<div class="creds" aria-label="Where the research appears and who supports it">
+  <div class="wrap">
+    <span class="lbl">Published in</span>
+    <ul><li>World Politics</li><li>Journal of Politics</li><li>Nature Human Behaviour</li><li>Journal of Conflict Resolution</li><li>Journal of Peace Research</li><li>Mobilization</li><li>International Interactions</li></ul>
+    <span class="lbl">Supported by</span>
+    <ul><li class="org">National Science Foundation</li><li class="org">Hoover Institution</li><li class="org">Smith Richardson Foundation</li><li class="org">Social Science Research Council</li></ul>
+  </div>
+</div>
 
 <section class="bio">
   <div class="wrap inner">
@@ -388,21 +482,21 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
     </div>
     <div class="content">
       <ul class="feed" id="feed">
-        <li><span class="date">Nov 2026</span><p>Louisiana State University selected me as its nominee to the 2027 Andrew Carnegie Fellows Program for <em>The Even Hand</em>, a project on how divided places lose and regain trust in the state. It pairs new street-level police and army records from Northern Ireland with a test in U.S. counties, and turns the findings into practices for police chiefs, mayors and governors, and mediators. <a class="more" href="#project-ni">Read more</a></p></li>
-        <li><span class="date">Oct 2026</span><p>The manuscript of my book, <em>Why Not Rebel? The Micro-Foundations of Political Order</em>, is complete, with all seven chapters drafted. <a class="more" href="#project-book">Read more</a></p></li>
-        <li><span class="date">Oct 2026</span><p>A new article on human rights advocacy and repression in Guatemala is under review. With Emily Hencken Ritter, I have begun a new project on backlash. <a class="more" href="#pub-working">Read more</a></p></li>
-        <li><span class="date">Jun 2026</span><p>Data collection for <em>Bureaucracy and Brutality: Intelligence and State-Sponsored Massacres in Iraq, 1987–1989</em> is complete. Working from the Ba'ath Party records in the Hoover Institution's Northern Iraq Database, the project builds two linked datasets, on where and when massacres took place and on the transfer of intelligence about potential threats. Coding and analysis are under way.</p></li>
-        <li><span class="date">Apr 2025</span><p>I have been awarded a Silas Palmer Fellowship by the Hoover Institution Library &amp; Archives for 2025–2026, supporting new research on intelligence and mass violence in Ba'athist Iraq from the regime's own records.</p></li>
-        <li><span class="date">Nov 13, 2023</span><p>Version 2 of the Association for Legal Justice human rights testimony collection, part of the Northern Ireland Research Initiative, is available at the Qualitative Data Repository. <a class="more" href="https://data.qdr.syr.edu/dataverse/NIRI">Read more</a></p></li>
-        <li class="earlier" hidden><span class="date">Dec 9, 2021</span><p>I presented "Why Not Rebel? Discovering the Origins of Political Order in the Guatemalan Police Archives" at the Conflict Records Unit, King's College London. <a class="more" href="https://www.kcl.ac.uk/events/why-not-rebel-discovering-the-origins-of-political-order-in-the-guatemalan-police-archives">Read more</a></p></li>
-        <li class="earlier" hidden><span class="date">Nov 2021</span><p>"And the Heat Goes On: Police Repression and the Modalities of Power," with Howard Liu, is out in the <em>Journal of Conflict Resolution</em>. <a class="more" href="https://doi.org/10.1177/00220027211013099">Read more</a></p></li>
-        <li class="earlier" hidden><span class="date">2021</span><p>I have been promoted to Associate Professor with tenure in the Department of Political Science at Louisiana State University.</p></li>
-        <li class="earlier" hidden><span class="date">2019</span><p>I have been named a Strategy and Policy Fellow of the Smith Richardson Foundation (2019–2023).</p></li>
-        <li class="earlier" hidden><span class="date">Dec 20, 2018</span><p>Laia Balcells and I wrote about how new data from conflict archives are transforming conflict studies for <em>Political Violence at a Glance</em>. <a class="more" href="https://politicalviolenceataglance.org/2018/12/20/seeing-like-combatants-how-new-data-from-conflict-archives-are-transforming-conflict-studies/">Read more</a></p></li>
-        <li class="earlier" hidden><span class="date">Mar 2018</span><p>The <em>Journal of Peace Research</em> special issue on new findings from conflict archives, which I co-edited with Laia Balcells, is out, with our introduction and my article with Christian Davenport on repression, adaptation, and surveillance. <a class="more" href="https://journals.sagepub.com/toc/jpra/55/2">Read more</a></p></li>
-        <li class="earlier" hidden><span class="date">Oct 2017</span><p>"Evidence that Curtailing Proactive Policing Can Reduce Major Crime," with Zachary O'Keeffe, appears in <em>Nature Human Behaviour</em>, with coverage from the <em>Los Angeles Times</em> to <em>Ars Technica</em>. <a class="more" href="https://doi.org/10.1038/s41562-017-0211-5">Read more</a></p></li>
-        <li class="earlier" hidden><span class="date">Sep 1, 2015</span><p>The National Science Foundation has funded our collaborative project, "An Organizational Approach to State Repression: The Northern Ireland Research Initiative and the Troubles, 1968–1998," with Christian Davenport and Cyanne Loyle. <a class="more" href="https://cps.isr.umich.edu/projects/collaborative-research-an-organizational-approach-to-state-repression-the-northern-ireland-research-initiative-and-the-troubles-1968-1998/">Read more</a></p></li>
-        <li class="earlier" hidden><span class="date">2015</span><p>"The (In)effectiveness of Torture for Combating Insurgency" was named runner-up for the <em>Journal of Peace Research</em> Article of the Year Award for 2014. <a class="more" href="https://prio.org/journals/jpr/articlesoftheyear/2014">Read more</a></p></li>
+        <li><div class="hl-top"><span class="date">Nov 2026</span><span class="hltype t3"><svg class="i" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>Award</span></div><p>Louisiana State University selected me as its nominee to the 2027 Andrew Carnegie Fellows Program for <em>The Even Hand</em>, a project on how divided places lose and regain trust in the state. It pairs new street-level police and army records from Northern Ireland with a test in U.S. counties, and turns the findings into practices for police chiefs, mayors and governors, and mediators. <a class="more" href="#project-ni">Read more</a></p></li>
+        <li><div class="hl-top"><span class="date">Oct 2026</span><span class="hltype t1"><svg class="i" viewBox="0 0 24 24"><path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z"/></svg>Book</span></div><p>The manuscript of my book, <em>Why Not Rebel? The Micro-Foundations of Political Order</em>, is complete, with all seven chapters drafted. <a class="more" href="#project-book">Read more</a></p></li>
+        <li><div class="hl-top"><span class="date">Oct 2026</span><span class="hltype t1"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>Research</span></div><p>A new article on human rights advocacy and repression in Guatemala is under review. With Emily Hencken Ritter, I have begun a new project on backlash. <a class="more" href="#pub-working">Read more</a></p></li>
+        <li><div class="hl-top"><span class="date">Jun 2026</span><span class="hltype t2"><svg class="i" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Data</span></div><p>Data collection for <em>Bureaucracy and Brutality: Intelligence and State-Sponsored Massacres in Iraq, 1987–1989</em> is complete. Working from the Ba'ath Party records in the Hoover Institution's Northern Iraq Database, the project builds two linked datasets, on where and when massacres took place and on the transfer of intelligence about potential threats. Coding and analysis are under way.</p></li>
+        <li><div class="hl-top"><span class="date">Apr 2025</span><span class="hltype t3"><svg class="i" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>Fellowship</span></div><p>I have been awarded a Silas Palmer Fellowship by the Hoover Institution Library &amp; Archives for 2025–2026, supporting new research on intelligence and mass violence in Ba'athist Iraq from the regime's own records.</p></li>
+        <li><div class="hl-top"><span class="date">Nov 13, 2023</span><span class="hltype t2"><svg class="i" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>Data</span></div><p>Version 2 of the Association for Legal Justice human rights testimony collection, part of the Northern Ireland Research Initiative, is available at the Qualitative Data Repository. <a class="more" href="https://data.qdr.syr.edu/dataverse/NIRI">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Dec 9, 2021</span><span class="hltype t0"><svg class="i" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8"/></svg>Talk</span></div><p>I presented "Why Not Rebel? Discovering the Origins of Political Order in the Guatemalan Police Archives" at the Conflict Records Unit, King's College London. <a class="more" href="https://www.kcl.ac.uk/events/why-not-rebel-discovering-the-origins-of-political-order-in-the-guatemalan-police-archives">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Nov 2021</span><span class="hltype t1"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>Article</span></div><p>"And the Heat Goes On: Police Repression and the Modalities of Power," with Howard Liu, is out in the <em>Journal of Conflict Resolution</em>. <a class="more" href="https://doi.org/10.1177/00220027211013099">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">2021</span><span class="hltype t0"><svg class="i" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>Promotion</span></div><p>I have been promoted to Associate Professor with tenure in the Department of Political Science at Louisiana State University.</p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">2019</span><span class="hltype t3"><svg class="i" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>Fellowship</span></div><p>I have been named a Strategy and Policy Fellow of the Smith Richardson Foundation (2019–2023).</p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Dec 20, 2018</span><span class="hltype t0"><svg class="i" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>Essay</span></div><p>Laia Balcells and I wrote about how new data from conflict archives are transforming conflict studies for <em>Political Violence at a Glance</em>. <a class="more" href="https://politicalviolenceataglance.org/2018/12/20/seeing-like-combatants-how-new-data-from-conflict-archives-are-transforming-conflict-studies/">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Mar 2018</span><span class="hltype t1"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>Article</span></div><p>The <em>Journal of Peace Research</em> special issue on new findings from conflict archives, which I co-edited with Laia Balcells, is out, with our introduction and my article with Christian Davenport on repression, adaptation, and surveillance. <a class="more" href="https://journals.sagepub.com/toc/jpra/55/2">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Oct 2017</span><span class="hltype t1"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>Article</span></div><p>"Evidence that Curtailing Proactive Policing Can Reduce Major Crime," with Zachary O'Keeffe, appears in <em>Nature Human Behaviour</em>, with coverage from the <em>Los Angeles Times</em> to <em>Ars Technica</em>. <a class="more" href="https://doi.org/10.1038/s41562-017-0211-5">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">Sep 1, 2015</span><span class="hltype t3"><svg class="i" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Grant</span></div><p>The National Science Foundation has funded our collaborative project, "An Organizational Approach to State Repression: The Northern Ireland Research Initiative and the Troubles, 1968–1998," with Christian Davenport and Cyanne Loyle. <a class="more" href="https://cps.isr.umich.edu/projects/collaborative-research-an-organizational-approach-to-state-repression-the-northern-ireland-research-initiative-and-the-troubles-1968-1998/">Read more</a></p></li>
+        <li class="earlier" hidden><div class="hl-top"><span class="date">2015</span><span class="hltype t3"><svg class="i" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>Award</span></div><p>"The (In)effectiveness of Torture for Combating Insurgency" was named runner-up for the <em>Journal of Peace Research</em> Article of the Year Award for 2014. <a class="more" href="https://prio.org/journals/jpr/articlesoftheyear/2014">Read more</a></p></li>
       </ul>
       <div class="feed-toggle"><button class="btn ghost" type="button" id="feed-more" aria-expanded="false">Show earlier highlights</button></div>
     </div>
@@ -450,7 +544,7 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
         <span class="icon"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M10 13h4"/></svg></span>
         <div>
           <h3>Foundation: conflict archives as data</h3>
-          <p>Police, army, intelligence, and movement records from Guatemala, Northern Ireland, and the United States, coded as events and paired with research designs built for causal inference.</p>
+          <p>Police, army, party, intelligence, and movement records from Guatemala, Northern Ireland, the United States, and Iraq, coded as events and paired with research designs built for causal inference.</p>
         </div>
         <a class="btn" href="#theme-0">Read more</a>
       </div>
@@ -627,7 +721,7 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
 
       <article class="project t2 vis-top" id="project-ni">
         <figure class="fig">
-          <img src="belfast.jpg" alt="A hooded figure holds a lit petrol bomb in front of a Belfast peace-line gate painted with the words 'There was never a good war or a bad peace'" width="1374" height="863" loading="lazy">
+          <img src="img/belfast.jpg" alt="A hooded figure holds a lit petrol bomb in front of a Belfast peace-line gate painted with the words 'There was never a good war or a bad peace'" width="1374" height="863" loading="lazy">
           <figcaption>A petrol bomb at a Belfast peace line. The mural quotes Benjamin Franklin: "There was never a good war or a bad peace."</figcaption>
         </figure>
         <div>
@@ -637,6 +731,10 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
           <p class="lede">After every wave of protest, Americans on the left and right make the same complaint: the police arrest our protesters and let the other side's go free. A divided country does not turn violent because its people disagree. It turns violent when one side concludes that the state has taken the other's part and stops trusting it.</p>
           <p>That distrust shows first on particular streets. Residents of one neighborhood stop obeying the government and govern themselves, with patrols and barricades, while people of the same community a few streets away do not. I call this contested authority: distrust turned into rival rule, and the link between what the state does and the violence that follows. My theory contends that a divided society heals when the state shows an even hand, treating like conduct alike on both sides, and opens a door, offering concessions to those shut out.</p>
           <p>Northern Ireland lived the full arc from lost trust to recovery, and the Northern Ireland Research Initiative, which I built with Christian Davenport and Cyanne Loyle under a National Science Foundation grant, records it street by street. This project adds the police and army records that show whom the state arrested, square kilometer by square kilometer, and uses the British Army's battalion rotations, set on a roster months ahead, to compare the same streets under units that policed evenly and units that did not.</p>
+          <figure class="datafig">
+            <a href="img/map-belfast-niri.png" title="Open full-size map"><img src="img/map-belfast-niri.png" alt="Map of Belfast on the 1 km Irish Grid, 1969 to 1973, with each square coloured by both violent incidents and contested-authority events. Nine squares held half of the city's 4,058 violent incidents, and seven held half of all contested authority. Three of ten mostly Catholic squares, around the Falls, Divis Street and Ballymurphy, held 78 percent of their contested authority, while neighbouring Catholic squares in Andersonstown saw few such events." width="1600" height="987" loading="lazy"></a>
+            <figcaption><b>Belfast, 1969–1973, by square kilometre.</b> Northern Ireland Research Initiative events located to the 1 km Irish Grid: violent incidents and contested-authority events (barricades, protests, marches, paramilitary policing). Violence and contested authority cluster on a handful of streets, and squares in the same community a few hundred metres apart diverge sharply. A first look at the atlas <em>The Even Hand</em> will publish. Select the map to enlarge it.</figcaption>
+          </figure>
           <div class="plain-lang">
             <h4>What it will tell us</h4>
             <p>Four tests ask how trust breaks, how concessions buy it back, how it returns after violence, and whether the pattern holds in U.S. counties since 2020. The findings become a book for general readers, <em>The Even Hand</em>; an online atlas of trust and policing in Northern Ireland; a U.S. county map of policing by conduct; and three one-page decision cards, for police chiefs, for mayors and governors, and for mediators, each stating one practice and the evidence behind it.</p>
@@ -659,8 +757,8 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
 
       <article class="project t1 vis-top" id="project-book">
         <figure class="fig">
-          <img src="guatemala-rivera.jpg" alt="Diego Rivera's mural Gloriosa Victoria: U.S. officials and Guatemalan officers shake hands over a bomb amid bananas and the bodies of Guatemalans" width="1170" height="587" loading="lazy">
-          <figcaption>Diego Rivera, <em>Gloriosa Victoria</em> (1954), on the coup that ended Guatemala's democratic decade and set the country on the path to civil war.</figcaption>
+          <img src="img/guatemala-rivera.jpg" alt="Diego Rivera's mural Gloriosa Victoria: U.S. officials and Guatemalan officers shake hands over a bomb amid bananas and the bodies of Guatemalans" width="1170" height="587" loading="lazy">
+          <figcaption>Diego Rivera, <em>Gloriosa Victoria</em> (1954), on the coup that ended Guatemala's democratic decade and set the country on the path to civil war.<span class="credit">Oil on canvas. Pushkin State Museum of Fine Arts, Moscow. © Banco de México Diego Rivera Frida Kahlo Museums Trust, Mexico City / Artists Rights Society (ARS), New York.</span></figcaption>
         </figure>
         <div>
           <span class="status">Book manuscript · complete</span>
@@ -668,6 +766,10 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
           <p class="sub">The Micro-Foundations of Political Order</p>
           <p>Guatemala's civil war produced one of the most extreme campaigns of state violence in the Western Hemisphere. Then the mass killing ended, years before the war formally did, and a political order took hold that most Guatemalans had not chosen and few openly resisted. <em>Why Not Rebel?</em> asks how.</p>
           <p>Drawing on more than 100,000 records of the National Police that I hand-coded over two years in an archive of eighty million pages, and using the 1976 earthquake as a shock to the state's capacity to watch, the book shows that repression produces order not by containing violence but by dismantling the clandestine organizational work on which open challenge depends, and by reshaping the ideological composition of local civil society. Its later chapters follow the legacies of that repression into municipal and national elections since 1996 and into the demands of protests decades later, measured against the demands for redistribution communities made before the conflict. Rather than asking why people rebel, it asks why, so often, they do not, and finds the answer in the organizational life that repression targets rather than in the attitudes of individuals or the strength of the state alone. What we call peace, it argues, can be the successful narrowing of what communities are able to demand.</p>
+          <figure class="datafig tall">
+            <a href="img/map-guatemala-earthquake.png" title="Open full-size figure"><img src="img/map-guatemala-earthquake.png" alt="Two-panel figure. Panel A maps Guatemalan municipalities shaded by 1976 earthquake damage, concentrated along the Motagua Fault in Chimaltenango, Sacatepéquez, El Progreso and Zacapa, with circles sized by months of police repression from 1976 to 1982. Panel B plots the share of municipality-months with police repression by damage level: severely damaged municipalities rise above the others by 1980, at 2.1 times the undamaged rate, and the gap closes by 1982." width="1300" height="1354" loading="lazy"></a>
+            <figcaption><b>The 1976 earthquake as a natural experiment.</b> A: infrastructural damage (World Bank index) and months with police repression, 1976–82, by municipality. B: police repression by damage level. Where the earthquake broke the state's capacity to watch, repression ran at 2.1 times the undamaged rate by 1980, before the gap closed in 1982. See <a href="#pub-jcr2021">"And the Heat Goes On" (<em>JCR</em> 2021)</a>.</figcaption>
+          </figure>
           <ul class="facts">
             <li><strong>Status</strong>Complete manuscript, seven chapters</li>
             <li><strong>Evidence</strong>Guatemalan National Police Historical Archive, fieldwork 2009–2011 and 2023; municipal election and protest data, 1996–present</li>
@@ -679,6 +781,13 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
       </article>
 
       <article class="project t1 vis-top" id="project-iraq">
+        <div class="mech" aria-label="The project's argument in four steps">
+          <div class="step"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><b>Surveillance reaches unevenly</b><span>Further into some regions than others</span></div>
+          <div class="step"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 18v-6M9 15l3-3 3 3"/></svg></span><b>Reports filter upward</b><span>Local information travels up the hierarchy unevenly</span></div>
+          <div class="step"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><b>Communities are labeled threats</b><span>Agencies sifting their data mark whole places</span></div>
+          <div class="step"><span class="ic"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><b>Targets are selected</b><span>Massacres follow where the labels fall</span></div>
+          <p class="mech-cap">The argument: states construct threats, then respond to them. The two linked datasets, on intelligence transfers and on massacres, measure each link.</p>
+        </div>
         <div>
           <span class="status">Research project · data collected June 2026 · coding under way</span>
           <h3>Bureaucracy and Brutality</h3>
@@ -725,6 +834,15 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
       <p>Each collection described by where, when, unit of analysis, and source, and tagged by the theme it serves.</p>
     </div>
     <div class="content">
+      <div class="records" aria-label="Chart of the years covered by each data collection, 1945 to the present">
+        <h3>Six decades of the paper trail of coercion</h3>
+        <p class="intro">The years each collection covers, to scale. Colors mark the research theme it serves; select a label for the collection.</p>
+        <div class="rc">
+          <div class="lab"><a href="#data-gtm-legacy">Decree 900 land reform records</a><small>Guatemala · 1952</small></div><div class="trk t1" aria-hidden="true"><span class="bar" style="left:8.64%;width:1.23%"></span></div><div class="lab"><a href="#data-ni-local">Census and Stormont vote baseline</a><small>Northern Ireland · 1961–65</small></div><div class="trk t2" aria-hidden="true"><span class="bar" style="left:19.75%;width:6.17%"></span></div><div class="lab"><a href="#data-redsquad">Police "Red Squad" and RNA records</a><small>United States · 1968–71</small></div><div class="trk t2" aria-hidden="true"><span class="bar" style="left:28.40%;width:4.94%"></span></div><div class="lab"><a href="#data-niri">Northern Ireland Research Initiative</a><small>Northern Ireland · 1968–98</small></div><div class="trk t2" aria-hidden="true"><span class="bar" style="left:28.40%;width:38.27%"></span></div><div class="lab"><a href="#data-alj">Association for Legal Justice testimony</a><small>Northern Ireland · 1970s–early 1990s</small></div><div class="trk t0" aria-hidden="true"><span class="bar" style="left:30.86%;width:29.63%"></span></div><div class="lab"><a href="#data-ahpn">National Police archive (AHPN)</a><small>Guatemala · 1975–85</small></div><div class="trk t1" aria-hidden="true"><span class="bar" style="left:37.04%;width:13.58%"></span></div><div class="lab"><a href="#data-gtm-muni">Municipal conflict data</a><small>Guatemala · 1977–94</small></div><div class="trk t3" aria-hidden="true"><span class="bar" style="left:39.51%;width:22.22%"></span></div><div class="lab"><a href="#data-iraq">Ba'ath Party records</a><small>Iraq · 1987–89</small></div><div class="trk t1" aria-hidden="true"><span class="bar" style="left:51.85%;width:3.70%"></span></div><div class="lab"><a href="#data-gtm-legacy">Elections and protest demands</a><small>Guatemala · 1996–present</small></div><div class="trk t1" aria-hidden="true"><span class="bar open" style="left:62.96%;width:38.27%"></span></div><div class="lab"><a href="#pub-nhb2017">NYPD enforcement and crime</a><small>United States · 2014–15</small></div><div class="trk t3" aria-hidden="true"><span class="bar" style="left:85.19%;width:2.47%"></span></div>
+          <div class="ax"><span style="left:12.35%">1955</span><span style="left:24.69%">1965</span><span style="left:37.04%">1975</span><span style="left:49.38%">1985</span><span style="left:61.73%">1995</span><span style="left:74.07%">2005</span><span style="left:86.42%">2015</span><span style="left:98.77%">2025</span></div>
+        </div>
+        <div class="rc-key"><span class="chip t1">Enforcing order</span><span class="chip t2">Resisting order</span><span class="chip t3">Evaluating coercion</span><span class="chip t0">Archives as data</span></div>
+      </div>
       <div class="stats">
         <div class="stat"><b>100,000+</b><span>police records hand-coded from the Guatemalan National Police Historical Archive's eighty million pages</span></div>
         <div class="stat"><b>1968–1998</b><span>thirty years of the Troubles in NIRI, from street to country, complete and public</span></div>
@@ -782,8 +900,8 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
           <p class="blurb">Municipal-level data on what communities demanded before the conflict and what they demand and vote for after it, used in the legacy chapters of <a href="#project-book"><em>Why Not Rebel?</em></a> to trace how repression that targeted mobilization shaped the ideological distribution of civil society and support for political demands decades later.</p>
           <dl>
             <dt>Where</dt><dd>Guatemala, municipality</dd>
-            <dt>When</dt><dd>Late 1940s baseline; 1996 to the present</dd>
-            <dt>Sources</dt><dd>Municipal and national election returns, 1996–present; political demands of protests, coded from the Social Conflict Analysis Database (SCAD); historical demands for redistribution extracted from the records of the land redistribution program organized in the late 1940s</dd>
+            <dt>When</dt><dd>1952 baseline; 1996 to the present</dd>
+            <dt>Sources</dt><dd>Municipal and national election returns, 1996–present; political demands of protests, coded from the Social Conflict Analysis Database (SCAD); historical demands for redistribution extracted from the records of the 1952 agrarian reform (Decree 900)</dd>
           </dl>
         </article>
 
@@ -1403,5 +1521,5 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
   }
 })();
 </script>
-
-</body></html>
+</body>
+</html>
