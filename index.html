@@ -373,6 +373,34 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
   .pc-ax{font-size:.62rem}
 }
 
+
+/* Iraq schematic */
+.schem-fig{margin:1rem 0 1.3rem}
+svg.schem{display:block; width:100%; height:auto; background:var(--ts); border:1px solid color-mix(in srgb,var(--tc) 25%,var(--line)); border-radius:.5rem; font-family:var(--body)}
+.schem .tier-lab text{font-size:12px; font-weight:700; fill:var(--muted); letter-spacing:.04em; text-transform:uppercase}
+.schem .up{stroke:var(--tc); stroke-width:1.6; opacity:.55}
+.schem .node{fill:var(--surface); stroke:var(--tc); stroke-width:1.6}
+.schem .node.top{fill:var(--tc); stroke:none}
+.schem .nl{font-size:14px; font-weight:700; text-anchor:middle; fill:var(--fg)}
+.schem .nl.inv{fill:var(--surface)}
+.schem .nl.sm{font-size:12px; font-weight:600; fill:var(--muted)}
+.schem .sep{stroke:var(--line); stroke-width:1}
+.schem .vil{fill:var(--surface); stroke:var(--muted); stroke-width:1.2; stroke-dasharray:3 3}
+.schem .vil.w{fill:var(--tc); stroke:none; opacity:.85}
+.schem .ring{fill:none; stroke:var(--t3); stroke-width:3}
+.schem .down{fill:none; stroke:var(--t3); stroke-width:2.4}
+.schem .ahp{fill:var(--t3)}
+.schem .ann text{font-size:13px; fill:var(--muted); font-style:italic}
+.schem .ann.dn-l text{fill:var(--t3); font-weight:600; font-style:normal}
+.schem .ann.up-l text{fill:var(--tc); font-weight:600; font-style:normal}
+.schem-key{display:flex; flex-wrap:wrap; gap:.35rem 1.2rem; font-size:.8rem; color:var(--muted); margin-top:.6rem}
+.schem-key i{display:inline-block; width:.85rem; height:.85rem; margin-right:.35rem; vertical-align:-.12rem; border-radius:2px}
+.schem-key .k-w{background:var(--tc)} .schem-key .k-u{border:1.5px dashed var(--muted)}
+.schem-key .k-up{height:3px; background:var(--tc); vertical-align:.2rem} .schem-key .k-dn{height:3px; background:var(--t3); vertical-align:.2rem}
+.schem-fig figcaption{font-size:.84rem; line-height:1.5; color:var(--muted); margin-top:.6rem}
+.mech.mech-m{display:none}
+@media (max-width:560px){ svg.schem,.schem-key{display:none} .mech.mech-m{display:grid; margin-bottom:0} }
+
 @media (max-width:900px){
   .section .inner,.bio .inner,.research-head,.theme-body,.theme-foot{grid-template-columns:minmax(0,1fr)}
   .section{padding-block:3.2rem}
@@ -720,14 +748,14 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
     <div class="content">
 
       <article class="project t2 vis-top" id="project-ni">
-        <figure class="fig">
-          <img src="belfast.jpg" alt="A hooded figure holds a lit petrol bomb in front of a Belfast peace-line gate painted with the words 'There was never a good war or a bad peace'" width="1374" height="863" loading="lazy">
-          <figcaption>A petrol bomb at a Belfast peace line. The mural quotes Benjamin Franklin: "There was never a good war or a bad peace."</figcaption>
-        </figure>
         <div>
           <span class="status">Second book · LSU nominee, Andrew Carnegie Fellows 2027 · new collection 2027–2028</span>
           <h3>The Even Hand</h3>
           <p class="sub">How divided places lose and regain trust in the state, from Belfast to America</p>
+          <figure class="fig">
+            <img src="belfast.jpg" alt="A hooded figure holds a lit petrol bomb in front of a Belfast peace-line gate painted with the words 'There was never a good war or a bad peace'" width="1374" height="863" loading="lazy">
+            <figcaption>A petrol bomb at a Belfast peace line. The mural quotes Benjamin Franklin: "There was never a good war or a bad peace."</figcaption>
+          </figure>
           <p class="lede">After every wave of protest, Americans on the left and right make the same complaint: the police arrest our protesters and let the other side's go free. A divided country does not turn violent because its people disagree. It turns violent when one side concludes that the state has taken the other's part and stops trusting it.</p>
           <p>That distrust shows first on particular streets. Residents of one neighborhood stop obeying the government and govern themselves, with patrols and barricades, while people of the same community a few streets away do not. I call this contested authority: distrust turned into rival rule, and the link between what the state does and the violence that follows. My theory contends that a divided society heals when the state shows an even hand, treating like conduct alike on both sides, and opens a door, offering concessions to those shut out.</p>
           <p>Northern Ireland lived the full arc from lost trust to recovery, and the Northern Ireland Research Initiative, which I built with Christian Davenport and Cyanne Loyle under a National Science Foundation grant, records it street by street. This project adds the police and army records that show whom the state arrested, square kilometer by square kilometer, and uses the British Army's battalion rotations, set on a roster months ahead, to compare the same streets under units that policed evenly and units that did not.</p>
@@ -756,14 +784,14 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
       </article>
 
       <article class="project t1 vis-top" id="project-book">
-        <figure class="fig">
-          <img src="guatemala-rivera.jpg" alt="Diego Rivera's mural Gloriosa Victoria: U.S. officials and Guatemalan officers shake hands over a bomb amid bananas and the bodies of Guatemalans" width="1170" height="587" loading="lazy">
-          <figcaption>Diego Rivera, <em>Gloriosa Victoria</em> (1954), on the coup that ended Guatemala's democratic decade and set the country on the path to civil war.<span class="credit">Oil on canvas. Pushkin State Museum of Fine Arts, Moscow. © Banco de México Diego Rivera Frida Kahlo Museums Trust, Mexico City / Artists Rights Society (ARS), New York.</span></figcaption>
-        </figure>
         <div>
           <span class="status">Book manuscript · complete</span>
           <h3>Why Not Rebel?</h3>
           <p class="sub">The Micro-Foundations of Political Order</p>
+          <figure class="fig">
+            <img src="guatemala-rivera.jpg" alt="Diego Rivera's mural Gloriosa Victoria: U.S. officials and Guatemalan officers shake hands over a bomb amid bananas and the bodies of Guatemalans" width="1170" height="587" loading="lazy">
+            <figcaption>Diego Rivera, <em>Gloriosa Victoria</em> (1954), on the coup that ended Guatemala's democratic decade and set the country on the path to civil war.<span class="credit">Oil on canvas. Pushkin State Museum of Fine Arts, Moscow. © Banco de México Diego Rivera Frida Kahlo Museums Trust, Mexico City / Artists Rights Society (ARS), New York.</span></figcaption>
+          </figure>
           <p>Guatemala's civil war produced one of the most extreme campaigns of state violence in the Western Hemisphere. Then the mass killing ended, years before the war formally did, and a political order took hold that most Guatemalans had not chosen and few openly resisted. <em>Why Not Rebel?</em> asks how.</p>
           <p>Drawing on more than 100,000 records of the National Police that I hand-coded over two years in an archive of eighty million pages, and using the 1976 earthquake as a shock to the state's capacity to watch, the book shows that repression produces order not by containing violence but by dismantling the clandestine organizational work on which open challenge depends, and by reshaping the ideological composition of local civil society. Its later chapters follow the legacies of that repression into municipal and national elections since 1996 and into the demands of protests decades later, measured against the demands for redistribution communities made before the conflict. Rather than asking why people rebel, it asks why, so often, they do not, and finds the answer in the organizational life that repression targets rather than in the attitudes of individuals or the strength of the state alone. What we call peace, it argues, can be the successful narrowing of what communities are able to demand.</p>
           <figure class="datafig tall">
@@ -781,17 +809,21 @@ footer .wrap{padding-block:1.5rem; font-size:.88rem; display:flex; flex-wrap:wra
       </article>
 
       <article class="project t1 vis-top" id="project-iraq">
-        <div class="mech" aria-label="The project's argument in four steps">
-          <div class="step"><span class="ic">1</span><b>Surveillance reaches unevenly</b><span>Further into some regions than others</span></div>
-          <div class="step"><span class="ic">2</span><b>Reports filter upward</b><span>Local information travels up the hierarchy unevenly</span></div>
-          <div class="step"><span class="ic">3</span><b>Communities are labeled threats</b><span>Agencies sifting their data mark whole places</span></div>
-          <div class="step"><span class="ic">4</span><b>Targets are selected</b><span>Massacres follow where the labels fall</span></div>
-          <p class="mech-cap">The argument: states construct threats, then respond to them. The two linked datasets, on intelligence transfers and on massacres, measure each link.</p>
-        </div>
         <div>
           <span class="status">Research project · data collected June 2026 · coding under way</span>
           <h3>Bureaucracy and Brutality</h3>
           <p class="sub">Intelligence and state-sponsored massacres in Iraq, 1987–1989</p>
+          <figure class="schem-fig">
+          <svg class="schem" viewBox="0 0 780 360" role="img" aria-labelledby="schem-t schem-d"><title id="schem-t">How the state constructs threats</title><desc id="schem-d">Schematic of the argument. Party informants watch some villages and not others. Their reports pass up through party branches to regional intelligence, thinning as they rise. Analysts label some watched communities as threats, and violence is directed back down at those labeled villages, while unwatched villages stay invisible to the state.</desc><defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahp" d="M0,0L10,5L0,10z"/></marker></defs><line class="sep" x1="168" y1="14" x2="168" y2="346"/><g class="tier-lab"><text x="14" y="47">Security</text><text x="14" y="62">directorate</text><text x="14" y="129">Regional</text><text x="14" y="144">intelligence</text><text x="14" y="209">Party</text><text x="14" y="224">branches</text><text x="14" y="303">Villages</text></g><line class="up" x1="205" y1="282" x2="275" y2="230"/><line class="up" x1="253" y1="282" x2="275" y2="230"/><line class="up" x1="301" y1="282" x2="275" y2="230"/><line class="up" x1="349" y1="282" x2="275" y2="230"/><line class="up" style="stroke-width:5" x1="275" y1="202" x2="470" y2="150"/><line class="up" x1="445" y1="282" x2="445" y2="230"/><line class="up" style="stroke-width:1.5" x1="445" y1="202" x2="470" y2="150"/><line class="up" x1="589" y1="282" x2="640" y2="230"/><line class="up" x1="637" y1="282" x2="640" y2="230"/><line class="up" style="stroke-width:3" x1="640" y1="202" x2="470" y2="150"/><line class="up" style="stroke-width:4" x1="470" y1="122" x2="470" y2="72"/><rect class="node top" x="390" y="38" width="160" height="34" rx="4"/><text class="nl inv" x="470" y="60">Threat list</text><rect class="node" x="410" y="122" width="120" height="28" rx="4"/><text class="nl sm" x="470" y="141">Region</text><rect class="node" x="233" y="202" width="84" height="28" rx="4"/><text class="nl sm" x="275" y="221">Branch</text><rect class="node" x="403" y="202" width="84" height="28" rx="4"/><text class="nl sm" x="445" y="221">Branch</text><rect class="node" x="598" y="202" width="84" height="28" rx="4"/><text class="nl sm" x="640" y="221">Branch</text><rect class="vil w" x="192" y="282" width="26" height="26" rx="3"/><rect class="vil w" x="240" y="282" width="26" height="26" rx="3"/><circle class="ring" cx="253" cy="295" r="20"/><rect class="vil w" x="288" y="282" width="26" height="26" rx="3"/><rect class="vil w" x="336" y="282" width="26" height="26" rx="3"/><circle class="ring" cx="349" cy="295" r="20"/><rect class="vil" x="384" y="282" width="26" height="26" rx="3"/><rect class="vil w" x="432" y="282" width="26" height="26" rx="3"/><rect class="vil" x="480" y="282" width="26" height="26" rx="3"/><rect class="vil" x="528" y="282" width="26" height="26" rx="3"/><rect class="vil w" x="576" y="282" width="26" height="26" rx="3"/><rect class="vil w" x="624" y="282" width="26" height="26" rx="3"/><circle class="ring" cx="637" cy="295" r="20"/><rect class="vil" x="672" y="282" width="26" height="26" rx="3"/><rect class="vil" x="720" y="282" width="26" height="26" rx="3"/><path class="down" d="M390,55 C213,60 253,170 253,268" marker-end="url(#ah)"/><path class="down" d="M390,55 C309,60 349,170 349,268" marker-end="url(#ah)"/><path class="down" d="M550,55 C677,60 637,170 637,268" marker-end="url(#ah)"/><g class="ann up-l"><text x="545" y="158">Reports thin out</text><text x="545" y="174">as they rise</text></g><g class="ann dn-l"><text x="730" y="100" text-anchor="end">Labeled communities</text><text x="730" y="116" text-anchor="end">selected as targets</text></g><g class="ann"><text x="480" y="336">Unwatched villages stay invisible to the state</text></g></svg>
+          <div class="schem-key"><span><i class="k-w"></i>Village under party surveillance</span><span><i class="k-u"></i>Not watched</span><span><i class="k-up"></i>Reports flowing up</span><span><i class="k-dn"></i>Violence directed down</span></div>
+          <div class="mech mech-m" aria-label="The project's argument in four steps">
+          <div class="step"><span class="ic">1</span><b>Surveillance reaches unevenly</b><span>Further into some regions than others</span></div>
+          <div class="step"><span class="ic">2</span><b>Reports filter upward</b><span>Local information travels up the hierarchy unevenly</span></div>
+          <div class="step"><span class="ic">3</span><b>Communities are labeled threats</b><span>Agencies sifting their data mark whole places</span></div>
+          <div class="step"><span class="ic">4</span><b>Targets are selected</b><span>Massacres follow where the labels fall</span></div>
+        </div>
+          <figcaption>The argument, in schematic: states construct threats, then respond to them. Surveillance reaches some communities and not others, information thins as it moves up the party hierarchy, and the communities analysts label as threats are selected for violence. The project's two linked datasets, on intelligence transfers and on massacres, measure each link. Illustrative, not data.</figcaption>
+        </figure>
           <p>Why do states commit massacres where and when they do? Cross-national research has treated mass killing as a single calculus made by national agencies responding to pre-existing threats. This project argues instead that states first construct threats and then respond to them: surveillance reaches further into some regions than others, information gathered locally filters upward unevenly, and as intelligence agencies sift their data, entire communities can be labeled threats and selected as targets.</p>
           <p>The evidence comes from the Ba'ath Party records in the Hoover Institution's Northern Iraq Database, seized by Kurdish forces in 1991 and covering the regime's most violent years. Produced for bureaucratic performance rather than public consumption, they are among the most unfiltered records of a state security apparatus available anywhere. From them I am building two linked datasets, on where and when massacres took place and on the transfer of intelligence about potential threats, with qualitative evidence of the causal process extracted from the Arabic originals. The project extends the organizational approach from the policing of dissent to the gravest form of state violence, and it ties my early work on massacres in Guatemala to the state's informational capacity.</p>
           <ul class="facts">
